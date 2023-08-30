@@ -1,0 +1,16 @@
+.tableParent{
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table td, th {
+    border: 1px solid #87ceeb;
+    text-align: left;
+}
+
+th,td {
+    padding: 7px;
+}

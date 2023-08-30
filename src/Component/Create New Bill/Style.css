@@ -1,0 +1,144 @@
+.mainBillContainer{
+    /* background-color: aquamarine; */
+    width: 70% !important;
+    display: flex;
+    /* justify-content: center; */
+    margin: auto;
+}
+
+.createBillClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CreateInput{
+    display: inline-block;
+    border: 1px solid #87ceeb;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createName{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.createBillNo{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.createDt1{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.createChalan{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.createDt2{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.createTrans{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.createDt3{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.createSrno{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createParticular{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0px 0px 1%; */
+}
+
+.createMfg{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createBatchNo{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createExpDate{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createPacking{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createQty{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createRate{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.createAmount{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+.createPs{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}
+
+.billListContain{
+    margin-top: 1% !important;
+    border: 2px solid #87ceeb;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.createNewBill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+}

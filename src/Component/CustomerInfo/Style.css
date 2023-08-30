@@ -1,0 +1,58 @@
+
+.CustomerInforMainContainer{
+    border-bottom: 2px solid #87ceeb;
+}
+.parentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.InputClass{
+    display: inline-block;
+    border: 1px solid #87ceeb;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+
+.customerName{
+    width: 95%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+.billNo{
+    width: 85%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.dtClass1{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.chalanClass{
+    width: 85%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.dtClass2{
+    width: 85%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.transClass{
+    width: 100%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.dtClass3{
+    width: 85%; 
+    padding: 12px 20px;
+    margin: 8px 0;
+}
