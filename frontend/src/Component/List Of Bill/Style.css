@@ -1,0 +1,19 @@
+.ourcustomer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createSearchInput{
+    display: inline-block;
+    border: 1px solid #87ceeb;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 1%;
+}
+.createSearch{
+    width: 100%; 
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+}

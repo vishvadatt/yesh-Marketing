@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import "./Style.css"
-import CustomerInfo from "../CustomerInfo/index"
-import Table from "../Table/index"
+import CustomerInfo from "./CustomerInfo/index"
+import Table from "./Table/index"
 
 export const Home = () => {
   return (
