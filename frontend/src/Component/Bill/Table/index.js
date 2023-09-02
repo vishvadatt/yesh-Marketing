@@ -2,12 +2,14 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import "./Style.css";
 
-const index = () => {
+const index = ({billDetail}) => {
+    const {Item,totalSum} = billDetail;
+
   return (
     <>
         <Grid container>
             <Grid item className='tableParent'>
-                <table>
+                <table style={{overflowX : "auto"}}>
                     <thead>
                         <tr>
                             <th>Sr.No.</th>
@@ -23,7 +25,7 @@ const index = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        {/* <tr>
                             <td>1</td>
                             <td>item 1</td>
                             <td>Abc</td>
@@ -46,7 +48,28 @@ const index = () => {
                             <td>3000</td>
                             <td>3000</td>
                             <td>1   </td>
-                        </tr>
+                        </tr> */}
+                        {
+                            Item && Item?.length > 0 ? (
+                                Item?.map((data,index) => {
+                                    return(
+                                        <tr key={index}>
+                                            <td>{data?.srno}</td>
+                                            <td>{data?.particulars}</td>
+                                            <td>{data?.mfgName}</td>
+                                            <td>{data?.batchNo}</td>
+                                            <td>{data?.expDate}</td>
+                                            <td>{data?.packing}</td>
+                                            <td>{data?.qty}</td>
+                                            <td>{data?.rate}</td>
+                                            <td>{data?.totalAmount}</td>
+                                            <td>{data?.ps}</td>
+
+                                        </tr>
+                                    )
+                                })
+                            ) : "No Found Data"
+                        }
                         <tr>
                             <th></th>
                             <th>
@@ -56,7 +79,7 @@ const index = () => {
                             <th colSpan={6}>
                                 Total...
                             </th>
-                            <th></th>
+                            <th>{totalSum}</th>
                             <th></th>
                         </tr>
                     </tbody>

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Style.css"
 import { Grid } from '@mui/material'
+import axios from "axios";
+import { Link, useParams } from 'react-router-dom';
 
-const index = () => {
+const Index = () => {
     const array = [
         {
             customerName : "vishvadatt",
@@ -20,6 +22,20 @@ const index = () => {
             billDate : "03/09/2023"
         }
     ]
+    
+     const [listOfBills,setOfBills] = useState([]);
+    const [totalCount,setTotalCount] = useState("")
+
+    useEffect(() => {
+        axios.get(`http://localhost:8001/api/Billing/Bills?searchText=&limit=10&pageNo=1`)
+        .then((response) =>{
+            setOfBills(response.data?.data?.list)
+            setTotalCount(response.data?.data?.totalCount)
+        })
+        .catch((e) => {
+            console.log("e..",e);
+        })
+    },[]);
   return (
     <Grid container>
         <Grid item lg={12} xs={12} sm={12}>
@@ -40,14 +56,16 @@ const index = () => {
             </thead>
             <tbody>
               {
-                array.map((data,index) => {
+                listOfBills.map((data,index) => {
                     return(
                         <tr key={index}>
                             <td>{data.customerName}</td>
-                            <td>{data.billNo}</td>
-                            <td>{data.billDate}</td>
+                            <td>{data.BillNo}</td>
+                            <td>{data.Date}</td>
                             <td>Edit</td>
-                            <td>View</td>
+                            <td>
+                                <Link to={`/${data._id}`}>View</Link>
+                            </td>
                         </tr>
                     )
                 })
@@ -59,4 +77,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

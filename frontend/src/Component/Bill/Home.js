@@ -1,10 +1,26 @@
 import { Grid } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Style.css"
 import CustomerInfo from "./CustomerInfo/index"
 import Table from "./Table/index"
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
 export const Home = () => {
+  const {id} = useParams()
+  const [billDetail,setBillDetails] = useState([])
+  useEffect(() => {
+    if(id !== undefined){
+      axios.get(`http://localhost:8001/api/Billing/findOne-Bill/${id}`)
+      .then((response) => {
+        console.log("re....",response.data.data[0]);
+        setBillDetails(response.data.data[0])
+      })
+      .catch((e) => {
+        console.log(e);
+      })
+    }
+  },[id])
   return (
     <Grid container className='mainContainer'>
       <Grid item className='mobileContainer'>
@@ -19,8 +35,8 @@ export const Home = () => {
       <Grid item className='addressContainer'>
         <h3 className='address'>Opp. Police Station, Jhagadia, Dist, Bharuch.<br />GST.NO. 24DBJPP9684L1ZP</h3>
       </Grid>
-     <CustomerInfo />
-     <Table />
+     <CustomerInfo billDetail={billDetail}/>
+     <Table billDetail={billDetail}/>
      <Grid item className='termAndConditionContainer'>
       <div className='termAndCondition'>
         <h3>TERMS :-</h3>
