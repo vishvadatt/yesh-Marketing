@@ -68,7 +68,7 @@ const index = ({billDetail}) => {
                                         </tr>
                                     )
                                 })
-                            ) : "No Found Data"
+                            ) : "No Bill found"
                         }
                         <tr>
                             <th></th>
