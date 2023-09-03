@@ -3,22 +3,24 @@ import React, { useEffect, useState } from 'react'
 import "./Style.css"
 import CustomerInfo from "./CustomerInfo/index"
 import Table from "./Table/index"
-import { useParams } from 'react-router'
+import { useLocation } from 'react-router'
 const Index = () => {
-    const {id} = useParams()
+
+    const params = useLocation()
+    const ID = params.search.split("?ID=")
+
     const [billDetail,setBillDetails] = useState([])
     useEffect(() => {
-      if(id !== undefined){
-        axios.get(`http://localhost:8001/api/Billing/findOne-Bill/${id}`)
+      if(ID[1] !== undefined){
+        axios.get(`http://localhost:8001/api/Billing/findOne-Bill/${ID[1]}`)
         .then((response) => {
-          console.log("re....",response.data.data[0]);
           setBillDetails(response.data.data[0])
         })
         .catch((e) => {
           console.log(e);
         })
       }
-    },[id])
+    },[ID[1]])
 
   return (
     <Grid container className='mainContainer'>
