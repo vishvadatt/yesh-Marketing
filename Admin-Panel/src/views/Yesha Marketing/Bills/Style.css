@@ -1,0 +1,85 @@
+.mainContainer{
+    border: 2px solid #87ceeb;
+    border-radius: 15px;
+    margin: auto;
+    width: 70% !important;
+}
+
+.mobileContainer{
+    width: 100% !important;
+}
+
+.mobileNo{
+    color: #87ceeb;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: end;
+    /* align-items: end; */
+    margin: 1%;
+}
+
+.headingContainer{
+    color: #87ceeb;
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingContainer .headingName{
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.paragraphContainer{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #87ceeb;
+}
+
+.paragraph{
+    color: #87ceeb;
+    font-size: 25px;
+    font-weight: 600;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.addressContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #87ceeb;
+}
+
+.address{
+    color: #87ceeb;
+    text-align: center;
+    font-style: inherit;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.termAndConditionContainer{
+    width: 95%;
+}
+
+.termAndCondition{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+    color: #87ceeb;
+}
+
+.listTerms{
+    margin-top: 0px;
+}
+.listTerms li {
+    color: #87ceeb;
+    font-size: 17px;
+}
